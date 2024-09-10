@@ -1,23 +1,22 @@
-import './App.css'
-import { Home } from './paginas/Home'
-import { Route,Routes } from 'react-router-dom'
-import { Navbar } from './componetes/navbar'
-import { User } from './paginas/Usuarios'
+
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { Navbar } from './componetes/navbar';
+import { Home } from './paginas/Home';
+import { Usuarios } from './componetes/Usuarios';
+import { UsuarioPorPais } from './componetes/usuariopais';
+
 function App() {
-  
-
   return (
-    <>
-    <Navbar/>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='usuarios' element={<User/>}/>
-      <Route path="usuarios/pais" element={<usuarios-pais/>}/>
-    </Routes>
-
-    </>
-    
-  )
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/usuarios/:pais" element={<UsuarioPorPais />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
