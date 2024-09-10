@@ -11,6 +11,7 @@ useEffect(()=>{
     obtenciondedatos()
 });
 console.log(users);
+
 return(
 <div>
 <h1>usuarios</h1>
