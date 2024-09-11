@@ -8,13 +8,15 @@ import { UsuarioPorPais } from './componetes/usuariopais';
 
 function App() {
   return (
-    <div>
+    <div className='contenedor-app'>
+      <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/usuarios" element={<Usuarios />} />
         <Route path="/usuarios/:pais" element={<UsuarioPorPais />} />
       </Routes>
+    </div>
     </div>
   );
 }
